@@ -31,7 +31,6 @@ export default class Layout extends Vue {}
 
 .sidebar-container {
   transition: width 0.28s;
-  width: 300px !important;
   height: 100%;
   position: fixed;
   font-size: 0px;

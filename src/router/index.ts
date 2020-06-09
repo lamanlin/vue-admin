@@ -25,6 +25,10 @@ export const constantRoutes: RouteConfig[] = [
     path: '/business',
     component: Layout,
     redirect: '/business/test',
+    meta: {
+      title: '业务',
+      icon: 'nested'
+    },
     children: [
       {
         path: 'test',
@@ -47,29 +51,6 @@ export const constantRoutes: RouteConfig[] = [
         }
       }
     ]
-  }
-]
-export const asyncRoutes: RouteConfig[] = [
-  {
-    path: '/help-center',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import(/* webpackChunkName: "helpCenter" */ '@/views/business/test2.vue'),
-        name: 'help-center',
-        meta: {
-          title: 'helpCenter',
-          icon: 'icon',
-          noCache: true
-        }
-      }
-    ]
-  },
-  {
-    path: '*',
-    redirect: '/404',
-    meta: { hidden: true }
   }
 ]
 

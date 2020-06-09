@@ -19,7 +19,6 @@
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
   import SidebarItem from './SidebarItem.vue'
-  import { PermissionModule } from '@/store/modules/permission'
   @Component({
     name: 'sidebar',
     components: {
@@ -28,7 +27,7 @@
   })
   export default class SideBar extends Vue {
     get routes() {
-      return PermissionModule
+      return this.$router.options.routes
     }
   }
 </script>
